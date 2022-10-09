@@ -1,0 +1,13 @@
+.video {
+    margin-top: 15vh;
+    margin-bottom: 10vh;
+    margin-left: 60vh;
+    align-items: center;
+    display: inline-block;
+    
+}
+
+.video h3 {
+    margin: 2vh;
+    margin-left: 25vh;
+}

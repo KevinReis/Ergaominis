@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Login</title>
+    <link rel="stylesheet" href="/CSS/login.css">
+    <link rel="icon" href="images/gatinho5.png">
+</head>
+
+
+<body>
+        
+    <div class="main-login">
+            <div class="left-login">
+                <a href="/"> 
+               <img src="/images/cat.svg" class="left-login-image"alt="cat animação"> </a>
+            </div>
+            <% if((cadastrar==0)||(cadastrar==2)){%>
+                <% if(cadastrar==0){%>
+                <form method="POST" action="/login">
+                    <div class="right-login">
+                        <div class="card-login">
+                            <div class="textfield">
+                            
+
+                <label><h1>Digite suas credenciais para iniciar as atividades </h1></label>    
+                <%}else  if(cadastrar==2){  %>    
+                <form method="POST" action="/loginadm">
+
+                    <div class="right-login">
+                        <div class="card-login">
+                            <div class="textfield">                        
+
+
+                <label><h1>Digite o usuário admin e senha para cadastrar novos funcionários</h1></label>    
+                <%} %>
+                    
+                       <br><label>E-mail</label> <input type="email" placeholder="E-mail" class="form-control" name="usuario">
+                        <br><label>Senha</label>
+                        <input type="password" placeholder="Senha" class="form-control" name="senha">
+                        <br>
+                        <button class="btn-login">Login</button>
+
+                            </div>
+                        </div>
+                    </div>
+                        
+
+                    </div>
+                
+            
+                </form> 
+
+                <a href="/telaloginadm"><button class="btn-login">Menu-Admin</button></a>  
+            </a>
+        </div>
+            </div>
+            <%} %>
+           
+           
+
+                <% if(cadastrar==1){%>
+                <div class="main-login">
+                    <form method="POST" action="/cadastro">
+                        <div class="right-login">
+                            <div class="card-login">
+                                <div class="textfield">
+                        <label><h4>Digite o e-mail para cadastro no sistema</h4></label>
+                        <label for="E-mail">Email</label>
+                            <input type="email" placeholder="e-mail" name="usuario">
+                            <label for="Senha">Senha</label>
+                            <input type="password" placeholder="Senha" name="senha">
+                            <label>Confirmar Senha</label>
+                            <input type="password" placeholder="Senha" name="senha2">
+                            <br>
+                            <button class="btn-login">Cadastrar</button>
+                            <br>
+                
+                <%} %>
+                    
+        </div>
+    </div>
+</body>
+</html>
+
+
