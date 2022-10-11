@@ -3,9 +3,12 @@ const express = require("express");  // carregar o express
 const app = express();// criando o app com funções express
 const bodyParser = require("body-parser"); // carregando o body-parser para tradução sequelize
 const knex = require("./database/database");
+const lodash= require("lodash");
 
 const bcrypt = require('bcryptjs');
 const session = require("express-session");
+
+
 
 
 
@@ -208,4 +211,4 @@ app.get("/camera", (req, res) => { //quando o servidor for requisitado arquivo l
 })
 
 //servidor
-app.listen(8181, () => { console.log("App rodando!"); })
+app.listen(process.env.PORT ||  8181, () => { console.log("App rodando!"); })
